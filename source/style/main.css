@@ -1,0 +1,35 @@
+:root {
+    --boxBorder: 1px solid rgba(0, 0, 0, 0.2);    
+
+    --ehHeight: 46px;
+    --ePWidth: 0;
+    --ePBsize: 30px;
+
+    --eDefaultHeight: 56px;
+    --eiFontSize: 20px;
+	--eDelButtonSize: 30px;
+
+    --vpBSize: 24px;
+    --vpBShadow: 0 0 5px hsla(0, 0%, 30%, 0.2);
+    --vpBShadowHover: 0 0 15px hsla(0, 0%, 30%, 0.3);
+}
+
+
+.no-select {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#glCanvas {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,205 @@
+.settings-toggle-group {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    /* display: inline-block; */
+}
+
+.settings-toggle {
+    width: 130px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.settings-toggle-on {
+    background-color: rgba(0, 128, 255, 1);
+    color: white;
+    border-color: hsla(0, 0%, 0%, 0.5);
+}
+.settings-toggle-on:hover {
+    box-shadow: 0 0 10px hsla(0, 0%, 50%, 0.8) inset;
+}
+.settings-toggle-off {
+    border-color: hsla(0, 0%, 0%, 0.3);
+}
+.settings-toggle-off:hover {
+    box-shadow: 0 0 10px hsla(0, 0%, 50%, 0.3) inset;
+}
+
+.settings-toggle-left {
+    float: left;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.settings-toggle-right {
+    float: right;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+.settings-toggle-off.settings-toggle-left {
+    border-right-width: 0px;
+}
+.settings-toggle-off.settings-toggle-right {
+    border-left-width: 0px;
+}
+
+
+
+
+.settings-axis-bound {    
+    border-width: 0;
+    border-bottom-width: 1px;
+    margin-bottom: 1px;
+    padding-bottom: 5px;
+    outline: none;
+    width: 40px;
+    font-size: 0.9em;    
+    font-family: "Times New Roman", Symbola, serif;
+}
+
+.settings-axis-bound:hover {
+    border-bottom-width: 2px;
+    margin-bottom: 0px;
+}
+
+.settings-axis-bound:focus {
+    border-bottom-width: 2px;
+    margin-bottom: 0px;
+    border-color: #08F;
+}
+
+.settings-axis {
+    margin: 8px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+
+#settingsAxesGroup {
+    display: block;
+    font-size: 1.1em;    
+    font-family: "Times New Roman", Symbola, serif;
+}
+
+.settings-check {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#settingsMenu {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    /* width: 100px;
+    height: 100px; */
+    padding: 8px;
+    /* padding-bottom: 3px; */
+    background-color: white;
+    box-shadow: 0 0 10px hsla(0, 0%, 50%, 0.3);
+    border-radius: 5px;
+    border: var(--boxBorder);
+    z-index: 500;
+    top: 10px;
+    right: calc(var(--vpBSize) + 35px);
+}
+
+
+#vpShowEP {
+    cursor: pointer;
+    margin-top: 7px;
+    margin-left: 4px;
+    color: hsla(0, 0%, 0%, 0.65);
+}
+#vpShowEP:hover {
+    color: hsla(0, 0%, 0%, 0.95);
+}
+
+
+.vp-buttons-container {
+    margin-bottom: 7px;
+}
+
+.vp-buttons:hover {
+    color: hsl(0, 0%, 5%);
+    z-index: 210;
+    box-shadow: var(--vpBShadowHover) !important;
+}
+
+.vp-buttons {
+    cursor: pointer;
+    position: relative;
+    font-size: var(--vpBSize) !important;
+    color: hsl(0, 0%, 37%);
+    background-color: hsl(0, 0%, 94%);
+    padding: 6px;
+    z-index: 200;
+    border-style: solid;
+    border-width: 1px;
+    border-color: hsl(0, 0%, 85%);
+    border-radius: 4px;
+    box-shadow: var(--vpBShadow);
+    transition: box-shadow 100ms;
+    font-weight: lighter;
+}
+
+#viewportButtonsContainer {
+    right: 10px;
+    top: 10px;
+    position: fixed;
+    text-align: right;
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+#viewportOverlay {
+    cursor: grab;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+/* #fpsCounter:hover {
+    opacity: 1;
+} */
+
+#fpsCounter {
+    opacity: 0;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+    color: black;
+}
+
+#viewport {
+    position: fixed;
+    left: var(--ePWidth);
+    float: right;
+    width: calc(100vw - var(--ePWidth));
+    height: 100vh;
+}
+
+
+.vp-buttons-group-top {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+}
+
+.vp-buttons-group-bottom {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: none;
+}
+
+.vp-buttons-group {
+    box-shadow: var(--vpBShadow);
+    display: grid;
+    grid-template-rows: auto auto;
+}
