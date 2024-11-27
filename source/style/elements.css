@@ -1,0 +1,171 @@
+#ePResizer {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    right: -12px;
+    width: 16px;
+    cursor: ew-resize;
+}
+
+
+/* #renderButtonContainer {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    z-index: 500;
+} */
+
+#renderButton {
+    position: absolute;
+    --marginWidth: 10px;
+    bottom: 0;
+    margin: var(--marginWidth);
+    width: calc(var(--ePWidth) - 2*var(--marginWidth));
+    z-index: 100;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    padding: 10px;
+    cursor: pointer;
+    /* background-color: #99CDFF; */
+}
+
+.element-input {
+    width: 90%;
+    padding: 0px 15px;
+    line-height: var(--eDefaultHeight);
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "Times New Roman", Symbola, serif;
+    font-size: var(--eiFontSize);
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.element-delete-container {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.element-delete-container:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+
+.element-delete {
+	font-size: var(--eDelButtonSize) !important;
+}
+
+/* .element {
+
+} */
+
+.el-warning {
+    background-color: rgba(0, 0, 0, 0) !important;
+    color:hsla(0, 0%, 20%, 0.7);
+    font-size: 27px !important;
+}
+
+
+.el-icon {    
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 1);     
+}
+
+.el-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.el-number {
+    position: absolute;
+    left: 1px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 11px;
+}
+
+.element-row {
+    height: var(--eDefaultHeight);
+    display: grid;
+    grid-template-columns: 40px auto var(--eDelButtonSize);
+    border-bottom: var(--boxBorder);
+}
+
+.element-label {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-right: var(--boxBorder);
+}
+
+#elementList {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.eh-center {
+    justify-self: center;
+}
+
+.eh-buttons {
+    font-size: var(--ePBsize) !important;
+    color: #666;
+    /* color: white; */
+    line-height: var(--ePBsize) !important;
+    cursor: pointer;
+    height: var(--ePBsize);
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.eh-buttons:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+
+#ehClose {
+    justify-self: right;
+    margin-right: 5px;
+    align-self: center;
+}
+
+#eh-add {
+    justify-self: left;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+#elementPane {
+    
+    z-index: 50;
+
+    position: fixed;
+    float: left;
+    width: var(--ePWidth);
+
+    height: 100vh;
+    margin: 0px;
+
+    box-sizing: border-box;
+    border-right: var(--boxBorder);
+
+    box-shadow: 2px 0 10px hsla(0, 0%, 50%, 0.3);
+}
+
+#elementHeader {
+    height: var(--ehHeight);
+    border-bottom: var(--boxBorder);
+    background: linear-gradient(#fcfcfc, #eaeaea);
+    /* background-color: #42A3FF; */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+}
